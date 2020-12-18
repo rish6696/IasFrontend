@@ -1,0 +1,16 @@
+.Button{
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  font-family: sfProRegular;
+  font-size: 15px;
+  color: white;
+  font-weight: 500;
+}
+
+.Button:focus{
+  outline: none;
+}
+
+  
