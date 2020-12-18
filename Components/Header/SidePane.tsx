@@ -1,4 +1,3 @@
-import { keys } from "@material-ui/core/styles/createBreakpoints";
 import React, { Component, Ref } from "react";
 import onClickOutside from "react-onclickoutside";
 import Button from "../Button";
@@ -40,25 +39,23 @@ class SidePane extends React.Component<Props> {
       title: "Economy, Environment and Science",
     },
     {
-    
       state: "inactive",
       iconName: "book.svg",
-      title: "NCERTs"
+      title: "NCERTs",
     },
     {
-    
       state: "inactive",
       iconName: "book.svg",
-      title: "Optional"
+      title: "Optional",
     },
     {
-      title:'Miscellaneous',
-      iconName:"Miscellaneous.svg",
-      state:"inactive"
-    }
+      title: "Miscellaneous",
+      iconName: "Miscellaneous.svg",
+      state: "inactive",
+    },
   ];
 
-  getDataJSX:Function = ():JSX.Element[] => {
+  getDataJSX: Function = (): JSX.Element[] => {
     return this.itemsData.map((x, i) => {
       return (
         <SidePaneMenuItems
@@ -73,11 +70,7 @@ class SidePane extends React.Component<Props> {
   };
 
   render() {
-    const {
-      show,
-      active,
-      onClickOutSide,
-    } = this.props;
+    const { show, active, onClickOutSide } = this.props;
 
     return (
       <FLexLayout
@@ -140,7 +133,6 @@ class SidePane extends React.Component<Props> {
         </div>
 
         {this.getDataJSX()}
-
       </FLexLayout>
     );
   }

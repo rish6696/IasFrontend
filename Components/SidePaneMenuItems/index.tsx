@@ -5,8 +5,8 @@ interface Props {
   style?: React.CSSProperties;
   title: string;
   iconName: string;
-  state: "active" | "inactive"|string;
-  className : string;
+  state: "active" | "inactive" | string;
+  className: string;
 }
 
 function SidePaneMenuItems({
@@ -14,24 +14,23 @@ function SidePaneMenuItems({
   iconName,
   style,
   state,
-  className
+  className,
 }: Props) {
-  const backgroundColor =
-    state == "active" ? "#ffffff" : "#F9F9F9";
+  const backgroundColor = state == "active" ? "#ffffff" : "#F9F9F9";
 
-  const fontWeight =
-    state == "active" ? 600 : "normal";
+  const fontWeight = state == "active" ? 600 : "normal";
 
-    const boxShadow = state=="active" ? '0px 10px 30px rgba(0, 0, 0, 0.06)' : "";
+  const boxShadow =
+    state == "active" ? "0px 10px 30px rgba(0, 0, 0, 0.06)" : "";
 
   return (
     <FLexLayout
-      style={{ ...style, backgroundColor,boxShadow }}
+      style={{ ...style, backgroundColor, boxShadow }}
       rowORColumn="row"
       className={className}
     >
       <img
-        style={{ height: "20px", width: "20px",marginLeft:'25px' }}
+        style={{ height: "20px", width: "20px", marginLeft: "25px" }}
         src={`/${iconName}`}
       ></img>
       <div

@@ -1,38 +1,22 @@
-import React, {
-  Component,
-  Ref,
-  useEffect,
-  useState,
-} from "react";
+import React, { Component, Ref, useEffect, useState } from "react";
 import Button from "../Button";
 import FLexLayout from "../FlexLayout";
 import SidePane from "./SidePane";
 
 const Header = () => {
-  const [windowWidth, setWindowWidth] = useState(
-    0
-  );
-  const [
-    showSideBar,
-    setSideBarActive,
-  ] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
+  const [showSideBar, setSideBarActive] = useState(false);
 
   const updateWindowSize = () => {
     setWindowWidth(window.innerWidth);
   };
 
   useEffect(() => {
-    window.addEventListener(
-      "resize",
-      updateWindowSize
-    );
+    window.addEventListener("resize", updateWindowSize);
     setWindowWidth(window.innerWidth);
 
     return () => {
-      window.removeEventListener(
-        "resize",
-        updateWindowSize
-      );
+      window.removeEventListener("resize", updateWindowSize);
     };
   }, []);
 
@@ -75,7 +59,7 @@ const Header = () => {
               marginLeft: "30px",
               marginRight: "30px",
               width: "300px",
-              paddingLeft:'10px'
+              paddingLeft: "10px",
             }}
           >
             <input
@@ -101,10 +85,7 @@ const Header = () => {
         )}
 
         {windowWidth >= 800 && (
-          <FLexLayout
-            rowORColumn="row"
-            style={{ marginRight: "60px" }}
-          >
+          <FLexLayout rowORColumn="row" style={{ marginRight: "60px" }}>
             <Button
               label="Login"
               style={{
